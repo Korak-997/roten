@@ -3,11 +3,14 @@
     <nav-tag></nav-tag>
     <div class="main">
       <div class="left">
-        <input class="input" v-model.lazy="input" type="text" placeholder="Write your text here.exp : Hello World">
+        <input class="input" v-model.lazy="text" type="text" placeholder="Write your text here.exp : Hello World">
         <input class="input" v-model.lazy="key" type="number">
-        <button @click.prevent="encrypt">Encrypt</button>
+        <button @click="encrypt">Encrypt</button>
       </div>
       <div v-show="encrypted" class="right">
+        <h3>Results</h3>
+        <hr>
+        <p>{{encrypted}}</p>
       </div>
     </div>
   </div>
@@ -23,8 +26,35 @@ export default {
     return{
       encrypted : "",
       text : "",
+      cLetters : "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(''),
+      sLetters : "abcdefghijklmnopqrstuvwxyz".split(''),
       key: 0
     }
+  },
+  methods:{
+    encrypt(){
+      var arr = this.text.split('')
+      var k = parseInt(this.key, 10)
+      var enT = []
+      arr.forEach(l => {
+        if(l.match(/^[A-Za-z]+$/)){
+          if (l == l.toUpperCase()){
+            enT.push(this.cLetters[(this.cLetters.indexOf(l) + k)% this.cLetters.length])
+          }
+          else{
+            enT.push(this.sLetters[(this.sLetters.indexOf(l) + k)% this.sLetters.length])
+          }
+        }
+        else{
+          enT.push(l)
+        }
+      });
+
+      this.encrypted = enT.join('')
+      this.text = ""
+      this.key = 0
+    }
+
   }
 }
 </script>
@@ -63,6 +93,7 @@ body{
   box-shadow: 3px 2px 10px 1px grey;
   padding: 1rem;
   color: snow;
+  text-align: center;
 }
 
 .input{
