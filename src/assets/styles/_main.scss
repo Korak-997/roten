@@ -1,0 +1,29 @@
+// color variables
+
+// style variables 
+$shadow: 3px 3px 5px 3px $grey;
+
+
+body{
+  background-color: $white;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+/* removing default browser styling  */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// wraper styles 
+
+.wraper{
+  width: 97%;
+  margin: .8em auto;
+  box-shadow: $shadow;
+  padding: 1em;
+}
