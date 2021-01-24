@@ -1,11 +1,18 @@
 // color variables
+$primary-black: #373640;
+$secondary-black: #1d1d20;
+$grey: #63686e;
+$blue: #7e97a6;
+$light-green: #b6f7c1;
+$dark-green: #239d60;
+
 
 // style variables 
-$shadow: 3px 3px 5px 3px $grey;
+$shadow: 1px 1px 5px 1px $dark-green;
 
 
 body{
-  background-color: $white;
+  background-color: $primary-black;
   width: 100vw;
   height: 100vh;
 }
