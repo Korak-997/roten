@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<script scoo>
+<script >
 
 export default {
   name: 'App',
