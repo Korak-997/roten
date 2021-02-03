@@ -1,10 +1,10 @@
 <template>
   <div id="nav">
     <ul>
-      <li> <a class="nav-link" href="#">R()tEn</a></li>
+      <li> <a class="nav-link" href="/">R()tEn</a></li>
     </ul>
     <ul>
-      <li> <a class="nav-link" href="#">Home</a></li>
+      <li> <a class="nav-link" href="/">Home</a></li>
       <li> <a class="nav-link" href="#">About</a></li>
     </ul>
   </div>
