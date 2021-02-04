@@ -34,7 +34,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 *{
   margin: 0;
-  padding: 0%;
+  padding: 0;
   box-sizing: border-box;
 }
 body{
@@ -47,6 +47,8 @@ body{
   width: 50%;
   text-align:center;
   color: snow;
+  display: flex;
+  flex-direction: column;
 }
 
 button{
@@ -56,7 +58,7 @@ button{
   color: snow;
   padding: 1rem;
   font-size: 1.5rem;
-  margin: 3em auto;
+  margin: .6em auto;
 }
 
 button:hover{
