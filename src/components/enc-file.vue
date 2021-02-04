@@ -26,11 +26,12 @@ export default {
 	name: "etext",
 	data() {
 		return {
-      json: "",
+      fileReady: false,
 			text: "",
 			cLetters: "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""),
 			sLetters: "abcdefghijklmnopqrstuvwxyz".split(""),
-			key: 0,
+      key: 0,
+      encrypted: ""
 		};
 	},
 	methods: {
@@ -56,14 +57,34 @@ export default {
 				} else {
 					enT.push(l);
 				}
-			});
+      });
 			this.text = "";
       this.key = 0;
-      this.createJson(enT.join(""))
+      this.encrypted = enT.join("")
+      this.fileReady = true
+      this.activateDlink()
     },
-    createJson(string){
-      this.json = JSON.stringify(string)
+    // creates a text file from encrypted text
+    makeTextFile(text){
+      let textFile = null
+      const data = new Blob([text], {type: 'text/plain'})
+      // manualy revoke the object Url to avoid memory leaks
+      if(textFile !== null){
+        window.URL.revokeObjectURL(textFile)
+      }
+      textFile = window.URL.createObjectURL(data)
+      return textFile
     },
+    activateDlink(){
+			const link = document.getElementById('dLink')
+			let fName = document.getElementById('file').files[0].name
+			const fileEndIndex = fName.split('').indexOf('.')
+			fName = fName.slice(0,fileEndIndex)
+			link.href = this.makeTextFile(this.encrypted)
+      link.download = `encrypted_${fName}`
+
+    },
+    // Reads the uploaded file and assign its text to the text variable
 		readFile() {
 			const file = document.getElementById("file").files[0];
 			const reader = new FileReader();
