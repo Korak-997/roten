@@ -13,11 +13,13 @@
 				<input class="input" v-model.lazy="key" type="number" />
 				<button @click="encrypt">Encrypt</button>
 			</div>
-			<div v-show="fileReady" class="right">
+
+			<div class="right" v-show="fileReady">
 				<h3>Here is your encrypted data you can download it :)</h3>
 				<hr />
 				<a download id="dLink">Download</a>
 			</div>
+			<!-- <img  v-show=" !fileReady" class="loading" src="../assets/loading.gif" alt="loading...."> -->
 		</div>
 	</div>
 </template>
@@ -26,7 +28,8 @@ export default {
 	name: "etext",
 	data() {
 		return {
-      fileReady: false,
+			fileReady: false,
+			processing: false,
 			text: "",
 			cLetters: "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""),
 			sLetters: "abcdefghijklmnopqrstuvwxyz".split(""),
@@ -61,7 +64,8 @@ export default {
 			this.text = "";
       this.key = 0;
       this.encrypted = enT.join("")
-      this.fileReady = true
+			this.fileReady = true
+			this.processing = false
       this.activateDlink()
     },
     // creates a text file from encrypted text
