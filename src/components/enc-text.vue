@@ -54,7 +54,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .main{
   margin: 2rem auto;
   border: 2px solid rgb(199, 100, 64);

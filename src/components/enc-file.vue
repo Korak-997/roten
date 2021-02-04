@@ -103,7 +103,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .main {
 	margin: 2rem auto;
 	border: 2px solid rgb(199, 100, 64);
@@ -155,5 +155,9 @@ export default {
 	background-color: transparent;
 	cursor: pointer;
 	border: 2px solid rgb(199, 100, 64);
+}
+
+.loading{
+	width: 10rem;
 }
 </style>
