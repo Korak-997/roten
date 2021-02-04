@@ -122,7 +122,6 @@ export default {
 }
 
 .right {
-	box-shadow: 3px 2px 10px 1px grey;
 	padding: 1rem;
 	color: snow;
 	text-align: center;
