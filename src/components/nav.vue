@@ -21,7 +21,7 @@ export default {
 #nav {
   font-family:'Rock Salt', cursive;
   background-color: rgb(199, 100, 64);
-  width: 50%;
+  width: 30%;
   height: 2%;
   display: flex;
   justify-content: space-evenly;
@@ -36,7 +36,7 @@ ul{
   list-style: none;
 }
 ul li{
-  margin: .3rem;
+  margin: .6em;
 }
 .nav-link{
   color: snow;
