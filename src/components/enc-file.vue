@@ -123,6 +123,10 @@ export default {
 	color: snow;
 	text-align: center;
 }
+#dLink{
+  font-size: 1.5rem;
+  color: snow;
+}
 
 .input {
 	text-align: center;
