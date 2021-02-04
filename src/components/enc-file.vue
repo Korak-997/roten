@@ -13,10 +13,10 @@
 				<input class="input" v-model.lazy="key" type="number" />
 				<button @click="encrypt">Encrypt</button>
 			</div>
-			<div v-show="encrypted" class="right">
-				<h3>Results</h3>
+			<div v-show="json" class="right">
+				<h3>Here is your encrypted data as a JSON object :)</h3>
 				<hr />
-				<p>{{ encrypted }}</p>
+				<p>{{  }}</p>
 			</div>
 		</div>
 	</div>
@@ -26,8 +26,7 @@ export default {
 	name: "etext",
 	data() {
 		return {
-			encrypted: "",
-			file: "",
+      json: "",
 			text: "",
 			cLetters: "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""),
 			sLetters: "abcdefghijklmnopqrstuvwxyz".split(""),
@@ -58,12 +57,13 @@ export default {
 					enT.push(l);
 				}
 			});
-
-			this.encrypted = enT.join("");
 			this.text = "";
-			this.key = 0;
-			console.log(this.file);
-		},
+      this.key = 0;
+      this.createJson(enT.join(""))
+    },
+    createJson(string){
+      this.json = JSON.stringify(string)
+    },
 		readFile() {
 			const file = document.getElementById("file").files[0];
 			const reader = new FileReader();
