@@ -36,12 +36,12 @@ ul{
   list-style: none;
 }
 ul li{
-  margin: 1rem;
+  margin: .3rem;
 }
 .nav-link{
   color: snow;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .nav-link:hover{
