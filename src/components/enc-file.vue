@@ -13,10 +13,10 @@
 				<input class="input" v-model.lazy="key" type="number" />
 				<button @click="encrypt">Encrypt</button>
 			</div>
-			<div v-show="json" class="right">
-				<h3>Here is your encrypted data as a JSON object :)</h3>
+			<div v-show="fileReady" class="right">
+				<h3>Here is your encrypted data you can download it :)</h3>
 				<hr />
-				<p>{{  }}</p>
+				<a download id="dLink">Download</a>
 			</div>
 		</div>
 	</div>
