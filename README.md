@@ -1,6 +1,6 @@
 # ss-Roten
   this is a branch for **roten** master branch
-  It will have the some functionality.
+  It will have the same functionality.
 
   Reasons for this new branch :
   * By encrypting files the browser goes too slow in the normal workflow of **Roten**
