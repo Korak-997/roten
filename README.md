@@ -7,7 +7,8 @@
   * This branch will be a test branch to test serverside rendering.
   * By **serverside** rendering the slowing down of the browser will be avoided.
   * For using **serverside** rendering i will be using **NUXTJS**
-  __________________________________________________-_______________
+
+-----------------------------------
 
   ## (NUXTJS)[https://nuxtjs.org/]
     Is a Framework build upon **VueJs** which makes **serverside rendering** in vueJs easier
