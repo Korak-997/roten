@@ -1,4 +1,16 @@
-# Roten
+# ss-Roten
+  this is a branch for **roten** master branch
+  It will have the some functionality.
+
+  Reasons for this new branch :
+  * By encrypting files the browser goes too slow in the normal workflow of **Roten**
+  * This branch will be a test branch to test serverside rendering.
+  * By **serverside** rendering the slowing down of the browser will be avoided.
+  * For using **serverside** rendering i will be using **NUXTJS**
+  __________________________________________________-_______________
+
+  ## (NUXTJS)[https://nuxtjs.org/]
+    Is a Framework build upon **VueJs** which makes **serverside rendering** in vueJs easier
 
 a Webapp for encrypting Texts and Files
 ----------------
