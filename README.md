@@ -10,8 +10,9 @@
 
 -----------------------------------
 
-  ## (NUXTJS)[https://nuxtjs.org/]
-    Is a Framework build upon **VueJs** which makes **serverside rendering** in vueJs easier
+  ## [NUXTJS](https://nuxtjs.org/)
+    
+  Is a Framework build upon **VueJs** which makes **serverside rendering** in vueJs easier
 
 a Webapp for encrypting Texts and Files
 ----------------
